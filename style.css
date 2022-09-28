@@ -1,9 +1,9 @@
 #gameFrame {
 
-	background-color: black;
-	height: 600px;
+	background-color: rgb(0, 0, 0);
+	height: 400px;
 	width: 800px;
-	margin: auto;
+	margin: auto;;
 	position: fixed;
 	overflow: hidden;
 }
@@ -14,25 +14,26 @@
 	left: 0;
 	height: 20px;
 	width: 100%;
-	background-color: coral;
+	background-color: rgb(20, 228, 16);
 	transition: width .5s;
 }
 
 .enemy {
-	width: 150px;
-	height: 400px;
+	width: 60px;
+	height: 200px;
 	position: absolute;
-	background-color: beige;
+	background-image: rgb(195, 195, 20);
 	bottom: -400px;
 	transition: all .5s;
 }
 
 .enemy.showing {
 	bottom: 0;
+	background-color: rgb(195, 195, 20);
 }
 
 .enemy.shooting {
-	background-color: red;
+	background-color: rgb(255, 0, 0);
 }
 
 
@@ -44,6 +45,6 @@
 
 
 .enemy.dead {
-	background-color: gray;
+	background-color: rgb(4, 4, 4);
 	height: 50px;
 }

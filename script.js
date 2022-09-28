@@ -1,5 +1,7 @@
 console.log("Howdy Cowboy");
+
 var healthPoints = 100;
+var shootSound;
 
 function updateHealthPoints(points) {
 
@@ -57,6 +59,8 @@ function enemyShootsMe(enemy) {
 
 		enemy.classList.add("shooting");
 		updateHealthPoints(healthPoints - 20);
+		shootSound.play();
+		console.log("Shooting sound plays");
 
 		setTimeout(()=> {
 			enemy.classList.remove("shooting");
@@ -69,6 +73,8 @@ function enemyShootsMe(enemy) {
 
 function randomEnemyAttacks() {
 
+	//shootSound = new sound("sound/mixkit-game-gun-shot-1662.mp3");
+	console.log(shootSound);
 	var randomEnemyNo = Math.random() * livingEnemies().length;
 	randomEnemyNo = Math.floor(randomEnemyNo);
 	var enemy = livingEnemies()[randomEnemyNo];
