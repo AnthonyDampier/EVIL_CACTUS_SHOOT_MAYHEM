@@ -19,21 +19,20 @@
 }
 
 .enemy {
-	width: 60px;
-	height: 200px;
+	width: 80px;
+	height: 160px;
 	position: absolute;
-	background-image: rgb(195, 195, 20);
 	bottom: -400px;
 	transition: all .5s;
 }
 
 .enemy.showing {
 	bottom: 0;
-	background-color: rgb(195, 195, 20);
 }
 
 .enemy.shooting {
-	background-color: rgb(255, 0, 0);
+	/*Explsion -> background-image: url("images/Pixel_Explosion Medium.png");*/
+	background-color: red;
 }
 
 
@@ -45,6 +44,6 @@
 
 
 .enemy.dead {
-	background-color: rgb(4, 4, 4);
-	height: 50px;
+	/*Death Animation*/
+	height: 0px;
 }

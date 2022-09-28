@@ -56,7 +56,6 @@ function enemyAttacksMe(enemy) {
 function enemyShootsMe(enemy) {
 
 	if(!enemy.classList.contains("dead")) {
-
 		enemy.classList.add("shooting");
 		updateHealthPoints(healthPoints - 20);
 		shootSound.play();
@@ -73,8 +72,6 @@ function enemyShootsMe(enemy) {
 
 function randomEnemyAttacks() {
 
-	//shootSound = new sound("sound/mixkit-game-gun-shot-1662.mp3");
-	console.log(shootSound);
 	var randomEnemyNo = Math.random() * livingEnemies().length;
 	randomEnemyNo = Math.floor(randomEnemyNo);
 	var enemy = livingEnemies()[randomEnemyNo];
