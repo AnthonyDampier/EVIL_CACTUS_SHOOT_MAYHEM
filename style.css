@@ -1,15 +1,33 @@
+body {
+	background-color: antiquewhite;
+}
+
 h1 {
 	font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 	font-weight: 300;
-	color:rgb(20, 228, 16);
+	color:rgb(198, 105, 7);
+
+}
+h2 {
+	font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+	font-weight: 300;
+	color:orange;
 }
 p {
 	font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 	color: orange;
 }
 
+button {
+	background-color: rgb(146, 103, 46);
+	color:bisque
+}
+
 #gameFrame {
 	background-color: rgb(0, 0, 0);
+	border-color:rgb(0, 0, 0);
+	padding: 20px;
+	padding-bottom: 5px;
 	height: 400px;
 	width: 800px;
 	margin: auto;;
@@ -18,12 +36,14 @@ p {
 }
 
 #healthBar {
+	font-family: Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+	color:black;
 	position: absolute;
 	top: 0;
 	left: 0;
 	height: 20px;
 	width: 100%;
-	background-color: rgb(20, 228, 16);
+	background-color: rgb(86, 154, 9);
 	transition: width .5s;
 }
 
