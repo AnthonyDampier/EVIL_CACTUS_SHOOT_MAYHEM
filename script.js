@@ -1,7 +1,7 @@
-console.log("Howdy Cowboy");
+console.log("Howdy Cowfolk");
 
 var healthPoints = 100;
-var shootSound;
+/*var shootSound;*/
 
 function updateHealthPoints(points) {
 
@@ -45,7 +45,7 @@ function enemyAttacksMe(enemy) {
 
 		setTimeout(()=> {
 			enemy.classList.remove("showing");
-		}, 3000);
+		}, 2000);
 		
 	}
 
@@ -63,7 +63,7 @@ function enemyShootsMe(enemy) {
 
 		setTimeout(()=> {
 			enemy.classList.remove("shooting");
-		}, 200);
+		}, 10);
 
 	}
 
