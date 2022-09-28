@@ -1,3 +1,4 @@
+console.log("Howdy Cowboy");
 var healthPoints = 100;
 
 function updateHealthPoints(points) {

@@ -4,7 +4,7 @@
 	height: 600px;
 	width: 800px;
 	margin: auto;
-	position: relative;
+	position: fixed;
 	overflow: hidden;
 }
 
