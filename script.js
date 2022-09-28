@@ -78,5 +78,4 @@ function randomEnemyAttacks() {
 		enemyAttacksMe(enemy);
 		randomEnemyAttacks();
 	}, randomDelay);
-
 }
