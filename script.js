@@ -21,6 +21,10 @@ function livingEnemies() {
 	return document.querySelectorAll(".enemy:not(.dead)");
 }
 
+function explosions() {
+	return document.querySelectorAll(".explosion");
+}
+
 
 function iShoot(enemy) {
 	enemy.classList.add("dead");
@@ -33,19 +37,19 @@ function iShoot(enemy) {
 }
 
 
-function enemyAttacksMe(enemy) {
+function enemyAttacksMe(enemy, explosion) {
 
 	if(healthPoints > 0) {
 
 		enemy.classList.add("showing");
 
 		setTimeout(()=> {
-			enemyShootsMe(enemy);
-		}, 1000);
+			enemyShootsMe(enemy, explosion);
+		}, 4000);
 
 		setTimeout(()=> {
 			enemy.classList.remove("showing");
-		}, 2000);
+		}, 5000);
 		
 	}
 
@@ -53,13 +57,12 @@ function enemyAttacksMe(enemy) {
 }
 
 
-function enemyShootsMe(enemy) {
+function enemyShootsMe(enemy, explosion) {
 
 	if(!enemy.classList.contains("dead")) {
-		enemy.classList.add("shooting");
+		enemy.classList.add("exploded");
+		explosion.classList.add("showing");
 		updateHealthPoints(healthPoints - 20);
-		shootSound.play();
-		console.log("Shooting sound plays");
 
 		setTimeout(()=> {
 			enemy.classList.remove("shooting");
@@ -75,11 +78,12 @@ function randomEnemyAttacks() {
 	var randomEnemyNo = Math.random() * livingEnemies().length;
 	randomEnemyNo = Math.floor(randomEnemyNo);
 	var enemy = livingEnemies()[randomEnemyNo];
+	var explosion = explosions()[randomEnemyNo];
 
 	var randomDelay = Math.random() * 2000 + 1000;
 
 	setTimeout( ()=> {
-		enemyAttacksMe(enemy);
+		enemyAttacksMe(enemy, explosion);
 		randomEnemyAttacks();
 	}, randomDelay);
 }
