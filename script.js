@@ -49,6 +49,7 @@ function enemyAttacksMe(enemy, explosion) {
 
 		setTimeout(()=> {
 			enemy.classList.remove("showing");
+			explosion.classList.remove("showing");
 		}, 5000);
 		
 	}
@@ -60,8 +61,8 @@ function enemyAttacksMe(enemy, explosion) {
 function enemyShootsMe(enemy, explosion) {
 
 	if(!enemy.classList.contains("dead")) {
-		enemy.classList.add("exploded");
 		explosion.classList.add("showing");
+		enemy.classList.add("exploded");
 		updateHealthPoints(healthPoints - 20);
 
 		setTimeout(()=> {

@@ -85,12 +85,12 @@ button {
 	transition: all .1s;
 }
 .explosion.showing {
-	bottom: 0;
+	bottom: -10px;
 }
 
-#explosion1 { left: 15px; }
-#explosion2{ left: 165px; }
-#explosion3 { left: 325px; }
-#explosion4 { left: 485px; }
-#explosion5 { left: 645px; }
+#explosion1 { left: 35px; }
+#explosion2 { left: 185px; }
+#explosion3 { left: 345px; }
+#explosion4 { left: 505px; }
+#explosion5 { left: 665px; }
 
