@@ -33,6 +33,7 @@ button {
 	margin: auto;;
 	position: relative;
 	overflow: hidden;
+	cursor:crosshair;
 }
 
 #healthBar {
@@ -81,16 +82,16 @@ button {
 	height: 200px;
 	position: absolute;
 	bottom: -400px;
-	right: 30px;
 	transition: all .1s;
 }
+
 .explosion.showing {
-	bottom: -10px;
+	bottom: -40px
 }
 
-#explosion1 { left: 35px; }
-#explosion2 { left: 185px; }
-#explosion3 { left: 345px; }
-#explosion4 { left: 505px; }
-#explosion5 { left: 665px; }
+#explosion1 { left: -40px; }
+#explosion2 { left: 110px; }
+#explosion3 { left: 270px; }
+#explosion4 { left: 430px; }
+#explosion5 { left: 590px; }
 
